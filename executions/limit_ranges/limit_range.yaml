@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: ns-memory-limit
+  namespace: limitrange
+spec:
+  limits:
+  - max:
+      memory: "500M"
+    min:
+      memory: "100M"
+    type: Pod
