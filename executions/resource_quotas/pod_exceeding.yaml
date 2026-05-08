@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: nginx
+  name: nginx
+  namespace: one
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+    resources:
+      requests:
+        memory: "4250M"
+        cpu: "4"
+      limits:
+        memory: "7500M"
+        cpu: "5750m"
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}
